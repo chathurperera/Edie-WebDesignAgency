@@ -156,14 +156,18 @@ main{
         .services{
 
             .card{
-                border: $border;
+                padding: 4.3rem 3.4rem;
+                margin: 4rem 0rem;
+                width: 100%;
+                max-width: 300px;
+                border-radius: 24px;
 
                 .card-ui , .card-FE, .card-BE{
                     width: 50px;
                     height: 50px;
                     display: grid;
                     place-items: center;
-                    border: $border;
+                    border-radius: 16px;
                 }
                 .card-ui{
                     background: $l-blue;
@@ -174,6 +178,71 @@ main{
                 .card-BE{
                     background: #EB5757;
                 }
+
+                h4{      
+                    font-size: 2.5rem;
+                    font-weight: 700;
+                    padding: 1.5rem 0rem;
+                }
+                p{
+                    font-size: 1.5rem;
+                    padding-bottom: 1.5rem;
+                }
+                button{
+                    background: $btn-color;
+                    padding: .9rem 1.2rem;
+                    border: none;
+                    border-radius: 12px;
+                    color: $gray-4;
+
+                    &:hover{
+                        background: $l-blue;
+                        color: #fff;
+                    }
+                }
+
+                &:hover{
+                    box-shadow:
+                    0 4.5px 3.6px rgba(0, 0, 0, 0.024),
+                    0 12.5px 10px rgba(0, 0, 0, 0.035),
+                    0 30.1px 24.1px rgba(0, 0, 0, 0.046),
+                    0 100px 80px rgba(0, 0, 0, 0.07);
+                    
+                }
+
+            }
+        }
+    }
+    .portfolio-sec{
+        .portfolio-title{
+            font-size: 2.5rem;
+            font-weight: 500;
+            width: 60%;
+            padding: 2rem 0;
+        }
+
+        .projects-wrapper{
+            .project{
+                margin-bottom: 3rem;
+                
+                img{
+                    width: 100%;
+                    border-radius: 24px;
+                }
+                span{
+                    font-size: 1.2rem;
+                    color:$gray-4;
+                }
+                p{
+                    font-size: 1.6rem;
+                    font-weight: 500;
+                }
+            }
+
+            .see-more{
+                font-size: 1.5rem;
+                display: flex;
+                align-items: center;
             }
         }
     }
@@ -246,9 +315,36 @@ main{
         }
     }
     
-    // main{
+    main{
 
-    // }
+        .services-sec{
+
+            .services{
+                @include dflex();
+            }
+        }
+
+        .portfolio-sec{
+            
+            .projects-wrapper{
+    
+
+
+                .project:nth-child(1){
+                    align-self: flex-end;
+                }
+                .project:nth-child(2){
+                    align-self: flex-end;
+                }
+                .project:nth-child(3){
+                    align-self: flex-end;
+                }
+                .project:nth-child(4){
+                    align-self: flex-end;
+                }
+            }
+        }
+    }
 }
 
 

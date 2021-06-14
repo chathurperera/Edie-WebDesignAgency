@@ -176,7 +176,11 @@ main .services-sec .services-title {
 }
 
 main .services-sec .services .card {
-  border: 1px solid black;
+  padding: 4.3rem 3.4rem;
+  margin: 4rem 0rem;
+  width: 100%;
+  max-width: 300px;
+  border-radius: 24px;
 }
 
 main .services-sec .services .card .card-ui, main .services-sec .services .card .card-FE, main .services-sec .services .card .card-BE {
@@ -184,7 +188,7 @@ main .services-sec .services .card .card-ui, main .services-sec .services .card 
   height: 50px;
   display: grid;
   place-items: center;
-  border: 1px solid black;
+  border-radius: 16px;
 }
 
 main .services-sec .services .card .card-ui {
@@ -197,6 +201,66 @@ main .services-sec .services .card .card-FE {
 
 main .services-sec .services .card .card-BE {
   background: #EB5757;
+}
+
+main .services-sec .services .card h4 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  padding: 1.5rem 0rem;
+}
+
+main .services-sec .services .card p {
+  font-size: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+main .services-sec .services .card button {
+  background: #E0E0E0;
+  padding: .9rem 1.2rem;
+  border: none;
+  border-radius: 12px;
+  color: #828282;
+}
+
+main .services-sec .services .card button:hover {
+  background: #2D9CDB;
+  color: #fff;
+}
+
+main .services-sec .services .card:hover {
+  box-shadow: 0 4.5px 3.6px rgba(0, 0, 0, 0.024), 0 12.5px 10px rgba(0, 0, 0, 0.035), 0 30.1px 24.1px rgba(0, 0, 0, 0.046), 0 100px 80px rgba(0, 0, 0, 0.07);
+}
+
+main .portfolio-sec .portfolio-title {
+  font-size: 2.5rem;
+  font-weight: 500;
+  width: 60%;
+  padding: 2rem 0;
+}
+
+main .portfolio-sec .projects-wrapper .project {
+  margin-bottom: 3rem;
+}
+
+main .portfolio-sec .projects-wrapper .project img {
+  width: 100%;
+  border-radius: 24px;
+}
+
+main .portfolio-sec .projects-wrapper .project span {
+  font-size: 1.2rem;
+  color: #828282;
+}
+
+main .portfolio-sec .projects-wrapper .project p {
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+main .portfolio-sec .projects-wrapper .see-more {
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
 }
 
 @media (min-width: 800px) {
@@ -249,5 +313,19 @@ main .services-sec .services .card .card-BE {
   header .header-cta {
     grid-area: h-cta;
     width: 100%;
+  }
+  main .services-sec .services {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  main .portfolio-sec .projects-wrapper {
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: minmax(100px, auto);
+  }
+  main .portfolio-sec .projects-wrapper .project:nth-child(1) {
+    align-self: flex-end;
   }
 }
