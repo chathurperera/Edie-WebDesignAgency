@@ -1,0 +1,19 @@
+*,*::before,*::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size:10px;
+}
+body{
+    background-color: #fff;
+    font-family: $ff-poppins;
+    // overflow: hidden;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
