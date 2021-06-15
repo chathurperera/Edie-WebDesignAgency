@@ -58,8 +58,10 @@ nav{
             position: fixed;
             top: 11%;
             left: 100%;
-
+            border-radius: 12px;
+            
             &.active{
+                background-color: #a2eca6ee;
                 left: 5%;
             }
 
@@ -246,10 +248,151 @@ main{
             }
         }
     }
+    .team-sec{
+        margin-top: 5rem;
+        .team-intro{
+
+            .team-intro-content{
+                
+                span{
+                    color: $red;
+                    font-size: 1.2rem;
+                    font-weight: 500;
+                }
+                h3{
+                    font-size: 2.5rem;
+                    font-weight: 500;   
+                    width: 55%;
+                    padding: 1.5rem 0;
+                }
+                p{
+                    font-size: 1.6rem;
+                    width: 60%;
+                    padding-bottom: 4rem;
+                }
+            }
+        }
+
+        .team-imgs{
+            @include dflex();
+
+            .avatar-img  img{
+                    width: 100%;
+                    padding: 1rem;
+                    border-radius: 25px;
+            }
+            .avatar-img:nth-child(2) img{
+                width: 200px;
+            }
+        }
+    }
+    
+    .testimonial-sec{
+        padding-top: 10rem;
+        .testimonial{
+            font-size: 2.8rem;
+            font-weight: 500;
+            max-width: 937px;
+        }
+        .testimonial-avatar{
+            margin-top: 4rem;
+            display: flex;
+            img{
+                width: 10%;
+                border-radius: 10px; 
+            }
+            .avatar-info{
+                padding-left: 2rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+
+                .name{
+                    font-size: 2rem;
+                    font-weight: 500;
+                    color: $gray-1;
+                }
+                .status{
+                    color: $gray-4;
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    }
 }
 
+footer{
+    margin-top: 5rem;
+    color: #fff;
+    background-color: $footer-clr;
+    padding:3.5rem 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around;
+    height: 470px;
 
+    .footer-navLinks{
+        ul{
+            list-style: none;
+            li{
+                a{
+                    text-decoration: none;
+                    font-size: 1.8rem;
+                    line-height: 2;
+                    color: #fff;
+                }
+            }
+        }
+    }
 
+    .sm-icons{
+
+        .footer-logo{
+            font-size: 3.5rem;
+            color: #fff;
+            font-family: $ff-heebo;
+            text-decoration: none;
+        }
+
+        .icons{
+            width: 110px;
+            @include dflex();
+            justify-content: space-around;
+            cursor: pointer;
+        }
+    }
+
+    .footer-cta{
+        width: 300px;
+        span{
+            color: $gray-4;
+        }
+        .input{
+            width:100%;
+            padding: 5px;
+            border-radius: 12px;
+            display: flex;
+            background: $gray-3;
+
+            input[type=email]{
+                background: $gray-3;
+                padding: .7rem .5rem;
+                border: none;
+            }
+            button{
+                margin-left: 1rem;
+                width: 100%;
+                padding: .8rem 2.2rem;
+                color: #fff;
+                background: $l-blue;
+                border: none;
+                border-radius: 12px;
+            }
+        }
+    }
+
+}
 
 
 @media (min-width:800px) {
@@ -316,7 +459,7 @@ main{
     }
     
     main{
-
+        width: 80%;
         .services-sec{
 
             .services{
@@ -328,22 +471,28 @@ main{
             
             .projects-wrapper{
     
-
+                display: grid;
+                grid-template-columns: repeat(2 ,1fr);
+                grid-gap: 1rem;
 
                 .project:nth-child(1){
-                    align-self: flex-end;
-                }
-                .project:nth-child(2){
-                    align-self: flex-end;
+                    padding-top: 8rem;
                 }
                 .project:nth-child(3){
-                    align-self: flex-end;
+                    padding-top:8rem;
                 }
-                .project:nth-child(4){
-                    align-self: flex-end;
-                }
+
             }
         }
+
+        .team-sec{
+            @include dflex();
+        }
+    }
+
+    footer{
+        flex-direction: row;
+        height: 300px;
     }
 }
 

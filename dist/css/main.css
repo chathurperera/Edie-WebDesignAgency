@@ -21,6 +21,10 @@ li {
   list-style: none;
 }
 
+.noScroll {
+  overflow: hidden;
+}
+
 nav {
   width: 90%;
   margin: 0 auto;
@@ -78,9 +82,11 @@ nav .nav-list {
   position: fixed;
   top: 11%;
   left: 100%;
+  border-radius: 12px;
 }
 
 nav .nav-list.active {
+  background-color: #a2eca6ee;
   left: 5%;
 }
 
@@ -263,6 +269,154 @@ main .portfolio-sec .projects-wrapper .see-more {
   align-items: center;
 }
 
+main .team-sec {
+  margin-top: 5rem;
+}
+
+main .team-sec .team-intro .team-intro-content span {
+  color: #EB5757;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+main .team-sec .team-intro .team-intro-content h3 {
+  font-size: 2.5rem;
+  font-weight: 500;
+  width: 55%;
+  padding: 1.5rem 0;
+}
+
+main .team-sec .team-intro .team-intro-content p {
+  font-size: 1.6rem;
+  width: 60%;
+  padding-bottom: 4rem;
+}
+
+main .team-sec .team-imgs {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+main .team-sec .team-imgs .avatar-img img {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 25px;
+}
+
+main .team-sec .team-imgs .avatar-img:nth-child(2) img {
+  width: 200px;
+}
+
+main .testimonial-sec {
+  padding-top: 10rem;
+}
+
+main .testimonial-sec .testimonial {
+  font-size: 2.8rem;
+  font-weight: 500;
+  max-width: 937px;
+}
+
+main .testimonial-sec .testimonial-avatar {
+  margin-top: 4rem;
+  display: flex;
+}
+
+main .testimonial-sec .testimonial-avatar img {
+  width: 10%;
+  border-radius: 10px;
+}
+
+main .testimonial-sec .testimonial-avatar .avatar-info {
+  padding-left: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+main .testimonial-sec .testimonial-avatar .avatar-info .name {
+  font-size: 2rem;
+  font-weight: 500;
+  color: #333333;
+}
+
+main .testimonial-sec .testimonial-avatar .avatar-info .status {
+  color: #828282;
+  font-size: 1.5rem;
+}
+
+footer {
+  margin-top: 5rem;
+  color: #fff;
+  background-color: #100E1D;
+  padding: 3.5rem 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 470px;
+}
+
+footer .footer-navLinks ul {
+  list-style: none;
+}
+
+footer .footer-navLinks ul li a {
+  text-decoration: none;
+  font-size: 1.8rem;
+  line-height: 2;
+  color: #fff;
+}
+
+footer .sm-icons .footer-logo {
+  font-size: 3.5rem;
+  color: #fff;
+  font-family: "Heebo", sans-serif;
+  text-decoration: none;
+}
+
+footer .sm-icons .icons {
+  width: 110px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: space-around;
+  cursor: pointer;
+}
+
+footer .footer-cta {
+  width: 300px;
+}
+
+footer .footer-cta span {
+  color: #828282;
+}
+
+footer .footer-cta .input {
+  width: 100%;
+  padding: 5px;
+  border-radius: 12px;
+  display: flex;
+  background: #F2F2F2;
+}
+
+footer .footer-cta .input input[type=email] {
+  background: #F2F2F2;
+  padding: .7rem .5rem;
+  border: none;
+}
+
+footer .footer-cta .input button {
+  margin-left: 1rem;
+  width: 100%;
+  padding: .8rem 2.2rem;
+  color: #fff;
+  background: #2D9CDB;
+  border: none;
+  border-radius: 12px;
+}
+
 @media (min-width: 800px) {
   nav .hamburger {
     display: none;
@@ -314,6 +468,9 @@ main .portfolio-sec .projects-wrapper .see-more {
     grid-area: h-cta;
     width: 100%;
   }
+  main {
+    width: 80%;
+  }
   main .services-sec .services {
     display: flex;
     justify-content: space-between;
@@ -321,11 +478,22 @@ main .portfolio-sec .projects-wrapper .see-more {
   }
   main .portfolio-sec .projects-wrapper {
     display: grid;
-    grid-gap: 2rem;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: minmax(100px, auto);
+    grid-gap: 1rem;
   }
   main .portfolio-sec .projects-wrapper .project:nth-child(1) {
-    align-self: flex-end;
+    padding-top: 8rem;
+  }
+  main .portfolio-sec .projects-wrapper .project:nth-child(3) {
+    padding-top: 8rem;
+  }
+  main .team-sec {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  footer {
+    flex-direction: row;
+    height: 300px;
   }
 }
