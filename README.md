@@ -30,9 +30,9 @@
 
 ### Built With
 
-- [HTML]
-- [Sass](https://sass-lang.com/)
-- [JavaScript]
+- HTML
+- Sass
+- JavaScript
 
 ## How To Use
 
