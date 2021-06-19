@@ -7,7 +7,7 @@
 <div align="center">
   <h3>
     <a href="https://edie-webdesignagency.vercel.app/">
-      Demo
+      View Demo
     </a>
   </h3>
 </div>
